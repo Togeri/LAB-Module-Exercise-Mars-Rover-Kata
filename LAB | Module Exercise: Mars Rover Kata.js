@@ -1,7 +1,7 @@
 
-
-// Rover Object Goes Here
+// Initialization
 // ======================
+// Rover Object Goes Here
 const rover1 = {
 	name: "Curiosity",
     x:1,
@@ -48,8 +48,6 @@ for (let row = 0; row < 10; row++) {
 }
 
 // Initialize Rovers' Positions on Grid:
-// --First, we will work with just one rover, but we will need to update this to a loop
-// --for the rest of the rovers as well
 rovers.forEach(rover => {
     grid[rover.y][rover.x] = "O"
 });
@@ -67,6 +65,7 @@ for (let row = 0; row < 10; row++) {
 
 // ======================
 
+// Movement Functions
 function turnLeft(rover){
     console.log("turnLeft was called!");
     console.log(`Current Rover Direction: ${rover.direction}`);
@@ -279,6 +278,9 @@ function moveBackward(rover){
     Y: ${rover.y}`)
 }
 
+// ==============================
+
+// Command and UI Functions
 
 function commands(strCommands) {
     // As the Rovers take turns for moving, we will assume that every rover follows the same
@@ -317,6 +319,11 @@ function commands(strCommands) {
 console.log(`ROVER'S MARS MAP:`)
 console.log(grid)
 commands("ffzzyrffrfflfrbblbbbbbb")
+
+//============================================
+
+// Results Logs
+
 console.log("MAP FINAL SITUATION AFTER COMMANDS EXECUTION:")
 console.log(grid)
 console.log(`Rovers' Travel Log:`)
