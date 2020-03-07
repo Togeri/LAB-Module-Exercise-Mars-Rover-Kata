@@ -3,25 +3,29 @@
 // Rover Object Goes Here
 // ======================
 const rover1 = {
+	name: "Curiosity",
     x:1,
     y:1,
     direction: "N",
     travelLog: []
 }
 const rover2 = {
+	name: "Opportunity",
     x:3,
     y:7,
     direction: "E",
     travelLog: []
 }
 const rover3 = {
+	name: "Spirit",
     x:5,
     y:3,
     direction: "S",
     travelLog: []
 }
 const rover4 = {
-    x:8,
+	name: "Endurance",
+	x:8,
     y:5,
     direction: "W",
     travelLog: []
@@ -307,14 +311,6 @@ function commands(strCommands) {
                 break;
         }
     }
-    // console.log(`Rovers' Travel Log:`)
-    // rovers.forEach(rover => {
-    //     rover.travelLog.forEach(element => {
-    //     console.log(element)
-    //     });
-    // });
-    // console.log(`Rover's Current Position:`)
-    // console.log(`{x: ${rover.x}, y: ${rover.y}}`)
 }
 
 console.log(`ROVER'S MARS MAP:`)
@@ -322,3 +318,10 @@ console.log(grid)
 commands("ffzzyrffrfflfrbblbbbbbb")
 console.log("MAP FINAL SITUATION AFTER COMMANDS EXECUTION:")
 console.log(grid)
+console.log(`Rovers' Travel Log:`)
+    rovers.forEach(rover => {
+		console.log(`${rover.name}:`)
+        rover.travelLog.forEach(element => {
+        console.log(element)
+        });
+    });
