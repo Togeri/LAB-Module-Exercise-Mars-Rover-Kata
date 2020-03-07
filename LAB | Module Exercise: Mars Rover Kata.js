@@ -111,8 +111,9 @@ function moveForward(rover){
                 /* 
                     We need to repeat this instruction 
                     [ rover.travelLog.push(currentRoverPosition) ]
-                    because the Iteration 5 | Tracking demands to do it 
-                    "after each move"
+					because the exercise: 
+					Iteration 5 | Tracking 
+					demands to do it "after each move"
                     This could be optimized by just writing that instruction in a single line of code
                     beneath the currentRoverPosition declaration (in other words, just write 
                     rover.travelLog.push(currentRoverPosition) in line 41), but it'll also keep track
